@@ -82,13 +82,13 @@ nav a.active{background:var(--marigold);color:var(--ink);font-weight:700}
 .info-box p{color:var(--muted)}
 
 /* SKILLS (ruled grid, any card count) */
-.skills-page-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border:2px solid var(--ink);background:var(--ink)}
-.skill-large-card{padding:28px 22px;background:var(--white);transition:background .2s}
-.skill-large-card:hover{background:var(--marigold)}
+.skills-page-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;border:2px solid var(--ink);background:var(--ink);align-items:stretch}
+.skill-large-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:220px;padding:28px 22px;background:var(--white);transition:background .2s,transform .2s}
+.skill-large-card:hover{background:var(--marigold);transform:translateY(-4px)}
 .skill-large-card i{font-size:30px;color:var(--cobalt);margin-bottom:16px;display:block}
 .skill-large-card:hover i{color:var(--ink)}
 .skill-large-card h2{font-size:21px;margin-bottom:6px}
-.skill-large-card p{font-size:14.5px;color:var(--muted)}
+.skill-large-card p{font-size:14.5px;color:var(--muted);margin-top:auto}
 .skill-large-card:hover p{color:var(--ink)}
 
 /* PROJECTS */
